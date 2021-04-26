@@ -14,7 +14,23 @@ const LocalNewsScreen = ({navigation}) => {
     const [news, setNews] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
+    const [page, setPage] = useState(1)
+    const [pageCount, setPageCount] = useState()
 
+
+    useEffect(()=>{
+        loadMoreData()
+    },[])
+
+    const loadMoreData = async() => {
+        if(page<=pageCount){
+            const response = await allNewsApi(page)
+            setPage(page+1)
+            if(response.ok){
+               setNews(news.concat(response.data.results))
+            }
+        }
+    }
 
 
     useEffect(()=>{
@@ -22,18 +38,19 @@ const LocalNewsScreen = ({navigation}) => {
     },[])
 
     const loadAllNews = async() => {
-
+       if(news.length === 0 ){
         setLoading(true)
-        const response = await allNewsApi()
+        const response = await allNewsApi(page)
+        setPage(page+1)
         setLoading(false)
 
        if(!response.ok){
           return setError(true)
        }
-
        setNews(response.data.results)
+       setPageCount(response.data.count)
        setError(false) 
-       
+       }
     }
     
 
@@ -68,7 +85,9 @@ const LocalNewsScreen = ({navigation}) => {
                 renderItem={({item})=><RenderItem item={item} />}  
                 keyExtractor={item => item.id.toString()}
                 refreshing={false}
-                onRefresh={()=>console.log('you refreshed me')}
+                onRefresh={()=>loadAllNews()}
+                onEndReached={loadMoreData}
+                onEndReachedThreshold ={0.1}
                 
     />
         </Screen>

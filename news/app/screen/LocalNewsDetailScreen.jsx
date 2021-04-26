@@ -17,12 +17,12 @@ const LocalNewsDetailScreen = ({route}) => {
             <ScrollView>
             <View>
                 <Text style={{
-                    fontSize: 20, 
+                    fontSize: 18, 
                     fontWeight:"bold", 
                     textAlign:'center', 
                     paddingTop: 5,
-                    backgroundColor:"purple",
-                    color: '#c6dfe0',
+                    backgroundColor:"#D6D6D6",
+                    color: '#5A5A5A',
                     paddingBottom: 15
                 }}
                 >
@@ -58,5 +58,5 @@ const LocalNewsDetailScreen = ({route}) => {
 export default LocalNewsDetailScreen;
 
 const styles = StyleSheet.create({
-    separator: {backgroundColor:'#cfa4ff', padding:1}
+    separator: {backgroundColor:'#ECECEC', padding:1}
 })

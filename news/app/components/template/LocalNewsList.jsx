@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, withBadge , Icon} from 'react-native-elements'
 import {ActivityIndicator, StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native'
 
+import style from '../../constants/'
 const LocalNewsList = ({title, content, image, onPress}) => {
     const Comment = withBadge(1)(Icon)
     const See = withBadge(3)(Icon)
@@ -22,16 +23,6 @@ const LocalNewsList = ({title, content, image, onPress}) => {
             </Text>
           </View>
 
-  {/* <View style={styles.separatorGrey}></View>
-
-  <View style={styles.flex}>
-      <View><Likes name="like2" type="antdesign"   color="#EAEAEA" /></View>
-      <View><See name="eye" type="ionicon"  color="#EAEAEA" /></View>
-      <View><Comment type="ionicon" name="ios-chatbubbles"  color="#EAEAEA"  /></View>
-      <View><Share name="sharealt" type="antdesign" color="#EAEAEA" /></View>
-  </View>
-
-  <View style={styles.separatorGrey}></View> */}
 </Card>
         </TouchableWithoutFeedback>
     )
@@ -57,7 +48,7 @@ const styles = StyleSheet.create({
       centerProp: {},
     //   image : {backgroundColor:"rgba(17, 17, 17,0.3)",},
       content: {marginBottom: 10, padding:10, lineHeight:20},
-      title: {fontSize:18, color:'black', lineHeight:25},
+      title: {fontSize:16, color:'#5A5A5A', lineHeight:25},
       container: {
         paddingRight:0,
         paddingLeft:0, 
@@ -66,7 +57,7 @@ const styles = StyleSheet.create({
         marginBottom:10, 
         marginLeft:0, 
         marginRight:0,
-        backgroundColor:'#d9f8f2'
+        backgroundColor: '#D6D6D6'
     },
     separatorGrey: {paddingTop:2, backgroundColor:'grey'},
     bodyContainer:{

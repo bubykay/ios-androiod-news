@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0b100r@kz^yebj10s4s6d^9+=8)i!v&$z^8o9!scj8im*ig!nn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.88.160']
+ALLOWED_HOSTS = ['192.168.88.77']
 
 
 # Application definition
@@ -40,11 +40,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_seed',
     'api',
-    'corsheaders',
+    # 'corsheaders',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 
     'django.middleware.security.SecurityMiddleware',
@@ -122,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 20
+    'PAGE_SIZE': 10
 }
 
 # Internationalization

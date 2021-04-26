@@ -35,14 +35,14 @@ const Tabs = () => {
             
           })} 
           tabBarOptions={{
-            activeTintColor:'white',
+            // activeTintColor:'white',
               style:{
-                backgroundColor: 'purple'
+                backgroundColor: '#ECECEC'
               },
               labelStyle:
               {
-                  fontSize:13,
-                color: 'white'
+                fontSize:13,
+                // color: 'black'
         
                 }
             }}

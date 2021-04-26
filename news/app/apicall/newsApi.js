@@ -1,8 +1,8 @@
 import apiClient from './client'
 
 
-const allNews = '/news/'
+const allNews = '/news/?page='
 
-const allNewsApi = () => apiClient.get(allNews)
+const allNewsApi = (no) => apiClient.get(allNews+no)
 
 export default allNewsApi
