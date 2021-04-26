@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
       centerProp: {},
     //   image : {backgroundColor:"rgba(17, 17, 17,0.3)",},
       content: {marginBottom: 10, padding:10, lineHeight:20},
-      title: {fontSize:16, color:'#5A5A5A', lineHeight:25},
+      title: {fontSize:16, color:'white', lineHeight:25},
       container: {
         paddingRight:0,
         paddingLeft:0, 
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         marginBottom:10, 
         marginLeft:0, 
         marginRight:0,
-        backgroundColor: '#D6D6D6'
+        backgroundColor: '#EA5017'
     },
     separatorGrey: {paddingTop:2, backgroundColor:'grey'},
     bodyContainer:{

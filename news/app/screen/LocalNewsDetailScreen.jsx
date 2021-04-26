@@ -21,15 +21,15 @@ const LocalNewsDetailScreen = ({route}) => {
                     fontWeight:"bold", 
                     textAlign:'center', 
                     paddingTop: 5,
-                    backgroundColor:"#D6D6D6",
-                    color: '#5A5A5A',
+                    backgroundColor:"#EA5017",
+                    color: 'white',
                     paddingBottom: 15
                 }}
                 >
                     {title}
                 </Text>
                 <Card.Image source={{uri:image}} style={{height:250, }} PlaceholderContent={<ActivityIndicator size="large"  color="white" />} />
-                <View style={styles.separator}></View>
+                {/* <View style={styles.separator}></View> */}
 
                 <LikeBar 
                     like={like} 
@@ -42,7 +42,7 @@ const LocalNewsDetailScreen = ({route}) => {
                     handleUnlike ={()=>setUnlike(unlike + 1)}
                     />
               
-              <View style={styles.separator}></View>
+              {/* <View style={styles.separator}></View> */}
 
                 <Text style={{marginTop:20, lineHeight:25, fontSize:18, padding:10}}>
                     {content.replaceAll('.', '\n')}
