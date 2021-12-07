@@ -5,6 +5,7 @@ import LikeBar from '../components/template/LikeBar';
 
 
 import Screen from '../components/template/Screen'
+import customStyle from '../constants/styles'
 const LocalNewsDetailScreen = ({route}) => {
     const {title, content, image, createdAt} = route.params
     const [facebook, setFacebook] = useState(0)
@@ -17,11 +18,11 @@ const LocalNewsDetailScreen = ({route}) => {
             <ScrollView>
             <View>
                 <Text style={{
-                    fontSize: 18, 
+                    fontSize: customStyle.fontSize.header, 
                     fontWeight:"bold", 
                     textAlign:'center', 
                     paddingTop: 5,
-                    backgroundColor:"#EA5017",
+                    backgroundColor: customStyle.background.primary,
                     color: 'white',
                     paddingBottom: 15
                 }}
@@ -58,5 +59,8 @@ const LocalNewsDetailScreen = ({route}) => {
 export default LocalNewsDetailScreen;
 
 const styles = StyleSheet.create({
-    separator: {backgroundColor:'#ECECEC', padding:1}
+    separator: {
+        backgroundColor:'#ECECEC', 
+        padding:1
+    }
 })

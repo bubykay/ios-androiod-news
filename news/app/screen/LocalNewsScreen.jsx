@@ -81,15 +81,13 @@ const LocalNewsScreen = ({navigation}) => {
             )}
             <FlatList 
                 data={news}
-                // ItemSeparatorComponent={ItemSeparator}
                 renderItem={({item})=><RenderItem item={item} />}  
                 keyExtractor={item => item.id.toString()}
                 refreshing={false}
                 onRefresh={()=>loadAllNews()}
                 onEndReached={loadMoreData}
                 onEndReachedThreshold ={0.1}
-                
-    />
+                />
         </Screen>
     );
 };

@@ -20,11 +20,13 @@ const LikeBar = ({facebook, handleLike, handleFacebookShare, handleTwitterShare,
                                 <Unlike name="dislike2" type="antdesign" />
                             </View>
                         </TouchableWithoutFeedback>
+
                         <TouchableWithoutFeedback onPress={handleFacebookShare}>
                             <View style={styles.icon}>
                                 <Facebook  name="logo-facebook" type="ionicon" color="#3b5998" />
                             </View>
                         </TouchableWithoutFeedback>
+                        
                         <TouchableWithoutFeedback onPress={handleTwitterShare}>
                             <View style={styles.icon}>
                             <Twitter name="logo-twitter" type="ionicon" color="#08a0e9" />
