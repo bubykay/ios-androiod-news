@@ -7,6 +7,7 @@ import LikeBar from '../components/template/LikeBar';
 import Screen from '../components/template/Screen'
 import customStyle from '../constants/styles'
 const LocalNewsDetailScreen = ({route}) => {
+    
     const {title, content, image, createdAt} = route.params
     const [facebook, setFacebook] = useState(0)
     const [twitter, setTwitter] = useState(0)
