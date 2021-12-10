@@ -69,6 +69,8 @@ const LocalNewsScreen = ({navigation}) => {
             <Loader />
         )
     }
+
+    // I need to fix android localnewsdetail view
     
     return (
         

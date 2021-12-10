@@ -47,7 +47,8 @@ const LocalNewsDetailScreen = ({route}) => {
               {/* <View style={styles.separator}></View> */}
 
                 <Text style={{marginTop:20, lineHeight:25, fontSize:18, padding:10}}>
-                    {content.replaceAll('.', '\n')}
+                    {content}
+                    {/* {content.replaceAll('.', '\n')} */}
                 </Text>
                 
                 
